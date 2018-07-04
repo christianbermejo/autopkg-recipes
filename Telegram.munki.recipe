@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Telegram</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Messaging</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://telegram.org/dl/macos</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Telegram</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>A new era of messaging.
+			
+			Telegram is a cloud-based instant messaging and voice over IP service.</string>
+			<key>developer</key>
+			<string>TELEGRAM MESSENGER LLP</string>
+			<key>display_name</key>
+			<string>Telegram</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.christianbermejo.munki.Telegram</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.christianbermejo.munki.Telegram</key>
+			<dict>
+				<key>git_hash</key>
+				<string>f16d6b5ce963f6d8696aed3a627aabf9dbc5cbd3</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.christianbermejo.autopkg-recipes/Telegram/Telegram.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>ce35dfbb44702059e9a4c9d3681e5a6f15b6163da21e7403e70924adfa0f9022</string>
+			</dict>
+			<key>com.github.tallfunnyjew.download.Telegram</key>
+			<dict>
+				<key>git_hash</key>
+				<string>eb4452848e2a9b774faf8ae7b4337d88672bbf48</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.tallfunnyjew-recipes/Telegram/Telegram.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>ea666f56b262dedd03a2c1a7fe9551b616960ae83f10f3a76a69dff3fcf01a8c</string>
+			</dict>
+			<key>com.github.tallfunnyjew.pkg.Telegram</key>
+			<dict>
+				<key>git_hash</key>
+				<string>68751e7f3b896b316825bcc5af71c4bed3f25894</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.tallfunnyjew-recipes/Telegram/Telegram.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>c18b870614236b42e11670a19b660eaa78d2f17620c866f548c3f30abe2151f2</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

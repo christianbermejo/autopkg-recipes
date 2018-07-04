@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Git</string>
+	<key>Input</key>
+	<dict>
+		<key>APP_DESTINATION</key>
+		<string>/Applications</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://sourceforge.net/projects/git-osx-installer/files/</string>
+		<key>MAJOR_OS_VERSION</key>
+		<string></string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Git</string>
+		<key>SEARCH_PATTERN</key>
+		<string>href="(.*/projects/git-osx-installer/files/git-.*%MAJOR_OS_VERSION%\.dmg.*)"</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</string>
+			<key>developer</key>
+			<string>Tim Charper</string>
+			<key>display_name</key>
+			<string>Git for Mac</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.Git.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.Git.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>925b8ec06d5fbbe7ac81ee8b8d7e53cab550f607</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Git/Git.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1d9f17b95bbb4afd8f3011e13f7123bccc809d77fc305c54948c359bf6dd3811</string>
+			</dict>
+			<key>com.github.jleggat.Git.munki</key>
+			<dict>
+				<key>git_hash</key>
+				<string>1f807e0d41b5756f99e80e5a8c96ce77e3d22182</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Git/Git.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>6af2c77af12b99ccfc8fe8f7c8ac15654b104f0e9d9dd049b21ec55d0b2bf795</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

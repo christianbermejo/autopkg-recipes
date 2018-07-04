@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.VisualStudioCode</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+		<false/>
+		<key>DOWNLOAD_URL</key>
+		<string>https://go.microsoft.com/fwlink/?LinkID=620882</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>Visual Studio Code</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Visual Studio Code is a new type of tool that combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. Code provides comprehensive editing and debugging support, an extensibility model, and lightweight integration with existing tools.</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>display_name</key>
+			<string>Visual Studio Code</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.killahquam.munki.visualstudiocode</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.killahquam.download.visualstudiocode</key>
+			<dict>
+				<key>git_hash</key>
+				<string>9bfcfa72425b4c91fdf08aa5acbbf2bea5f0a39e</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.killahquam-recipes/VisualStudioCode/VisualStudioCode.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c3ac4e461258cc975e812af8969d75a1c4e68b4814e4b85abc60ee285ab31e07</string>
+			</dict>
+			<key>com.github.killahquam.munki.visualstudiocode</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b8639ace132f1d2893b898744c144ede800e953a</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.killahquam-recipes/VisualStudioCode/VisualStudioCode.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>8069536b3fca30dd289ee85c3b62c74aa62cd9178493ae7c8b804195b64bbcea</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.RealVNCViewer</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Networking</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/RealVNC</string>
+		<key>NAME</key>
+		<string>RealVNCViewer</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>VNC enables you to remotely access and control your devices wherever you are in the world, whenever you need to.</string>
+			<key>developer</key>
+			<string>RealVNC</string>
+			<key>display_name</key>
+			<string>RealVNC Viewer</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.foigus.munki.RealVNCViewer</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.foigus.download.RealVNCViewer</key>
+			<dict>
+				<key>git_hash</key>
+				<string>87e7d107af0c2868e35ecb308787e2282cb33cff</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.foigus-recipes/RealVNC/RealVNCViewer.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>662fe49a85f160173f905f4b4a30b8d45179fabcb14303262bc9abe8081209b5</string>
+			</dict>
+			<key>com.github.foigus.munki.RealVNCViewer</key>
+			<dict>
+				<key>git_hash</key>
+				<string>772bdd3b49459735862e7002d9364fe2b8f95362</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.foigus-recipes/RealVNC/RealVNCViewer.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>1d86a6196fd49d8048b2b007c0f25aa59a0586a53a2b57fa059e1d8cdd402e5d</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

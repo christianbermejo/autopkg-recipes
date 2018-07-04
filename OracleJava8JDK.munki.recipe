@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.OracleJava8JDK</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>plugins/Oracle</string>
+		<key>NAME</key>
+		<string>OracleJava8JDK</string>
+		<key>ORACLE_LICENSE_COOKIE</key>
+		<string>oraclelicense=accept-securebackup-cookie</string>
+		<key>SEARCH_PATTERN</key>
+		<string>(?P&lt;url&gt;http://download.oracle.com/otn-pub/java/jdk/.*?/jdk-8u[0-9]+-macosx-x64.dmg)</string>
+		<key>SEARCH_URL</key>
+		<string>http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+				<string>production</string>
+				<string>zoom</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Oracle Corporation</string>
+			<key>description</key>
+			<string>The JDK is a development environment for building applications, applets, and components using the Java programming language. The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the Java platform.</string>
+			<key>display_name</key>
+			<string>Oracle Java 8 Development Kit</string>
+			<key>minimum_os_version</key>
+			<string>10.7.4</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>i386</string>
+				<string>x86_64</string>
+			</array>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.OracleJava8JDK.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.hansen-m.download.OracleJava8JDK</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b2606f14593a51378f1c935cc489291d34c0e7a0</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.hansen-m-recipes/Oracle/OracleJava8JDK.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1fbe2ad3113bfc96be9df8d3d57100e66e2300586f7795b397fa6747e33af5e1</string>
+			</dict>
+			<key>com.github.nmcspadden.OracleJava8JDK.munki</key>
+			<dict>
+				<key>git_hash</key>
+				<string>9d6aa9f2787c120a35d2ba919bc4ce39903143c0</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.nmcspadden-recipes/Oracle/OracleJava8JDK.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>ce6d399c5d13bf95083faf2b3ddb2af65b04cfc22c92930edd7700b7c1c6f2b6</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

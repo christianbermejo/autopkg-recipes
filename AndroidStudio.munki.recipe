@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.AndroidStudio</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Android</string>
+		<key>NAME</key>
+		<string>AndroidStudio</string>
+		<key>SEARCH_PATTERN</key>
+		<string>(https\://dl\.google\.com/dl/android/studio/install/.+/android-studio-ide.+\.dmg)</string>
+		<key>SEARCH_URL</key>
+		<string>https://developer.android.com/sdk/index.html</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Android Studio is the official IDE for Android application development, based on IntelliJ IDEA.</string>
+			<key>developer</key>
+			<string>Google</string>
+			<key>display_name</key>
+			<string>Android Studio</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>requires</key>
+			<array>
+				<string>OracleJava8JDK</string>
+			</array>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.foigus.munki.AndroidStudio</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.foigus.munki.AndroidStudio</key>
+			<dict>
+				<key>git_hash</key>
+				<string>772bdd3b49459735862e7002d9364fe2b8f95362</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.foigus-recipes/Google/AndroidStudio.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>e59d64aa662f165fe2212c9546ff0095388a59dd579c182b50ee808543602d29</string>
+			</dict>
+			<key>com.github.novaksam.download.AndroidStudio</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e68fce2c677ab76e8003b2b4b4290c082ffc0269</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.novaksam-recipes/Recipes - Download/AndroidStudio.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>4a9aa5cc44ee6127372291dcf9b2f6c3a31e7eec4c6baa3101b0860eb8ec0056</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

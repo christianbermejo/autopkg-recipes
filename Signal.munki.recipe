@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Signal</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Messaging</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Signal</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Privacy is possible. Signal makes it easy.
+
+Using Signal, you can communicate instantly while avoiding SMS fees, create groups so that you can chat in real-time with all of your friends at once, and share media and other files with complete privacy. The server never has access to any of your communication and never stores any of your data.</string>
+			<key>developer</key>
+			<string>Riddle Quiet Ventures, LLC</string>
+			<key>display_name</key>
+			<string>Signal</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.christianbermejo.munki.Signal</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.christianbermejo.munki.Signal</key>
+			<dict>
+				<key>git_hash</key>
+				<string>48306278fb9d609b2f9e6809174d6e8e208d43f3</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.christianbermejo.autopkg-recipes/Signal/Signal.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>875e791949efc44826e18c9ba4d86d12f9aede17a06f0e21a7201a191723e567</string>
+			</dict>
+			<key>com.github.crystalllized.download.Signal</key>
+			<dict>
+				<key>git_hash</key>
+				<string>89455a46ca84f15363b4edd90c39ecd9be3070a0</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.crystalllized-recipes/Signal/Signal.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>2e0076111418eb4e92bc3b5a672f6f280847b831840dfdbcad389271cdcfdea9</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

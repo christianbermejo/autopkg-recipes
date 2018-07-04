@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Silverlight</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Microsoft</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.microsoft.com/getsilverlight/handlers/getsilverlight.ashx</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>Silverlight</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>description</key>
+			<string>Microsoft Silverlight is a free web-browser plug-in that enables interactive media experiences, rich business applications and immersive mobile apps.</string>
+			<key>display_name</key>
+			<string>Microsoft Silverlight</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.Silverlight</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Silverlight</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8958ead0cda7264101e339a5eba318a2f407e20a</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Silverlight/Silverlight.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>13d6bfcdea65f1383dd6edb4ad0f3d5b810f12bafc0d1ea3ddd32abfad8528d2</string>
+			</dict>
+			<key>com.github.autopkg.munki.Silverlight</key>
+			<dict>
+				<key>git_hash</key>
+				<string>423bd68ebbfc17689e4420dab2e9acfa9b6c0505</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Silverlight/Silverlight.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>37216c9bd28abade3e0897d28ef855da2ea19cee28f811840be3d615e925c019</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

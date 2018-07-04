@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.SkypeForBusiness</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Messaging</string>
+		<key>CHANNEL</key>
+		<string>Production</string>
+		<key>LOCALE_ID</key>
+		<string>1033</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Skype</string>
+		<key>NAME</key>
+		<string>SkypeForBusiness</string>
+		<key>VERSION</key>
+		<string>latest</string>
+		<key>munki_required_update_name</key>
+		<string></string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Skype for Business</string>
+				<string>Microsoft Error Reporting</string>
+				<string>Microsoft AutoUpdate</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Skype Communications S.a r.l.</string>
+			<key>display_name</key>
+			<string>Skype for Business</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.SkypeForBusiness</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MSOffice2016URLandUpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>bae6c3c49b86df34cd39965dcfad6f4b75ed88a2</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2016URLandUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>58d2b507db9913b27e96db55735008e19fea2e1b19cdcbeca4af5ccf026d6be2</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.SkypeForBusiness</key>
+			<dict>
+				<key>git_hash</key>
+				<string>2332e78c11f9b272cf67324baf268421f8312113</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/SkypeForBusiness.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>89a0c4056812e3350251b442ddb7764b2a9f1746b5f44b184810be39c7f7e2e4</string>
+			</dict>
+			<key>com.github.autopkg.munki.SkypeForBusiness</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6d40cab0361aa78c4da7d41cba8c985b0486a011</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/SkypeForBusiness.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>13e979abd188ab1087d67642f66922aeaed4cc9eff89e9533b973b5e7b5a9265</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

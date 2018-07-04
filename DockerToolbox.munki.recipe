@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.DockerToolbox</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Virtualization</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Docker</string>
+		<key>NAME</key>
+		<string>DockerToolbox</string>
+		<key>pathname</key>
+		<string>%pathname%</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Docker Quickstart Terminal.app</string>
+				<string>Kitematic (Beta).app</string>
+				<string>Kitematic.app</string>
+				<string>VirtualBox.app</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>The Docker Toolbox installs everything you need to get started with Docker on Mac OS X.</string>
+			<key>developer</key>
+			<string>Docker Inc.</string>
+			<key>display_name</key>
+			<string>DockerToolbox</string>
+			<key>minimum_os_version</key>
+			<string>10.8</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.DockerToolbox</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.DockerToolbox</key>
+			<dict>
+				<key>git_hash</key>
+				<string>afba7683f34c8579a83297ee24bba1b538eb8633</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Docker/DockerToolbox.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>33be205ab9362eee36326a85af5fd81d49818c6355cb11c6d1dab52152f4e0b4</string>
+			</dict>
+			<key>com.github.homebysix.munki.DockerToolbox</key>
+			<dict>
+				<key>git_hash</key>
+				<string>199e6d723d7dccc84e026622c6a966c3ba7b15e3</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Docker/DockerToolbox.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>d5790aa2c8ec00ed23e13d3bb441b0d334eb8c08c5683382d9e94256d6947580</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

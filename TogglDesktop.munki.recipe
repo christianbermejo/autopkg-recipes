@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.TogglDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>TogglDesktop</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://assets.toggl.com/installers/darwin_stable_appcast.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>A time tracker built for speed and ease of use.</string>
+			<key>developer</key>
+			<string>Apprise LLC</string>
+			<key>display_name</key>
+			<string>TogglDesktop</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.TogglDesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.TogglDesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>fa81cb1eb2df540e76d6a54bf3fd92d6081ce66f</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Toggl/TogglDesktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>68e17a2243d691e824aadce1e3dbae6897a7c3e80016d919235d6b9db6131718</string>
+			</dict>
+			<key>com.github.homebysix.munki.TogglDesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>abb8a7a1dd6f0dfa3e23de17829e083126474304</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Toggl/TogglDesktop.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>8998c8d17b7065a87593ad1138f7578d243ee39fa3a8938e6479079e7c6027d4</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

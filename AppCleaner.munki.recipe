@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.AppCleaner</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>APP_DESTINATION</key>
+		<string>/Applications/Utilities</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>AppCleaner</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://freemacsoft.net/appcleaner/Updates.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>AppCleaner is a small application which allows you to thoroughly uninstall unwanted apps.</string>
+			<key>developer</key>
+			<string>FreeMacSoft</string>
+			<key>display_name</key>
+			<string>AppCleaner Uninstaller Utility</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.AppCleaner.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.AppCleaner.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>55371b0cb7d3a9528691e0e94e999674900fdabd</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/AppCleaner/AppCleaner.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>8cfac1d88c333c08f73e17580eb900e876102d45ab2374207a84531715d1315b</string>
+			</dict>
+			<key>com.github.jleggat.AppCleaner.munki</key>
+			<dict>
+				<key>git_hash</key>
+				<string>934d23d27a68ee8668ebe57eee26364696065b2a</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/AppCleaner/AppCleaner.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>fd872382d82b17bb091e86dabed96363518d47686de840d6e2294a5de15ff1c8</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.OmniDiskSweeper</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>APPCAST_URL</key>
+		<string>http://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/OmniGroup</string>
+		<key>NAME</key>
+		<string>OmniDiskSweeper</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>OmniDiskSweeper is really great at what it does- showing you the files on your drive, in descending order by size, and letting you decide what to do with them. Delete away, but exercise caution. (Requires OS X v10.8+)</string>
+			<key>developer</key>
+			<string>The Omni Group</string>
+			<key>display_name</key>
+			<string>OmniDiskSweeper</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.luisgiraldo.munki.omnidisksweeper</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.luisgiraldo.munki.omnidisksweeper</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e295f380990207ad7aec926bd04ac2f31c33128d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.luisgiraldo-recipes/OmniGroup/OmniDiskSweeper.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>b1c1d39a3ed6cb205fce3672094dc2850e71ebd75c914a2be309d126322ca7a1</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

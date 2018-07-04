@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.GitKraken</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://release.gitkraken.com/darwin/installGitKraken.dmg</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>MUNKI_DEVELOPER</key>
+		<string>Axosoft</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%MUNKI_DEVELOPER%</string>
+		<key>NAME</key>
+		<string>GitKraken</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Axosoft GitKraken is a cross-platform Git client with efficiency, elegance and reliability at the core. It was made for devs by devs.</string>
+			<key>developer</key>
+			<string>%MUNKI_DEVELOPER%</string>
+			<key>display_name</key>
+			<string>GitKraken</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>io.github.hjuutilainen.munki.GitKraken</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.GitKraken</key>
+			<dict>
+				<key>git_hash</key>
+				<string>89bba55431c07e37bb498cc476ba2366dcf52469</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/Axosoft/GitKraken.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>adb519a12830739fb24f012c2a457c1305de37f7223c0d98a92c16c56dd4c56a</string>
+			</dict>
+			<key>io.github.hjuutilainen.munki.GitKraken</key>
+			<dict>
+				<key>git_hash</key>
+				<string>72407dcdc7477219fa4d373ef782483f399942a3</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/Axosoft/GitKraken.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>13d13e2235e4015ffdca039b1a44dafbc1f538349d8b86097d4c9b2079ab6159</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

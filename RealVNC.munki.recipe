@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.RealVNC</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Networking</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/RealVNC</string>
+		<key>NAME</key>
+		<string>RealVNC</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>VNC enables you to remotely access and control your devices wherever you are in the world, whenever you need to.</string>
+			<key>developer</key>
+			<string>RealVNC</string>
+			<key>display_name</key>
+			<string>RealVNC</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.foigus.munki.RealVNC</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.foigus.download.RealVNC</key>
+			<dict>
+				<key>git_hash</key>
+				<string>366a48254669f8aa596706db2dfb4a249fe44381</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.foigus-recipes/RealVNC/RealVNC.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>83d9643c0d2abfb84bf8d14c459b2322faede48206424290ddee8d24a13cf123</string>
+			</dict>
+			<key>com.github.foigus.munki.RealVNC</key>
+			<dict>
+				<key>git_hash</key>
+				<string>772bdd3b49459735862e7002d9364fe2b8f95362</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.foigus-recipes/RealVNC/RealVNC.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>a4e9188f63c20f6f9d15d92f4a29c4f731c8ddc1e9cb54de60bcb24b22f5ebe3</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

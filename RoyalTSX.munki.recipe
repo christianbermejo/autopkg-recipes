@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.RoyalTSX</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Networking</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Royal TSX</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Easily access your remote systems.</string>
+			<key>developer</key>
+			<string>Felix Deimel</string>
+			<key>display_name</key>
+			<string>Royal TSX</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.RoyalTSX</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.RoyalTSX</key>
+			<dict>
+				<key>git_hash</key>
+				<string>77af310da397b2c79073356e977d0f0c8e6ebf9f</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Royal/RoyalTSX.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>fa5b80a47a487de08f44bf0b9f1b1322141de52f0f4387cf9a9e0cb02636e4ec</string>
+			</dict>
+			<key>com.github.homebysix.munki.RoyalTSX</key>
+			<dict>
+				<key>git_hash</key>
+				<string>31f6ab47c34ccc7160fdb5f8fceffc475a51f15f</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Royal/RoyalTSX.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>f8e7de72dadf9c1fdb45eb7a82599c801c03d2854b87a748a2ba430043fb1658</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

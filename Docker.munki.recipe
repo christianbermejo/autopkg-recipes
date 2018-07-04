@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Docker</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Virtualization</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Docker</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://download.docker.com/mac/stable/appcast.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.</string>
+			<key>developer</key>
+			<string>Docker Inc.</string>
+			<key>display_name</key>
+			<string>Docker</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+# Based on scripts/postinstall
+# which in turn is based on:
+# &lt;https://forums.docker.com/t/feature-request-cli-tool-for-automated-installation/18334/4&gt;
+# assumes the following directories exist:
+# /usr/local/bin
+# Will create:
+# /Library/PrivilegedHelperTools
+# if missing
+
+declare -r docker_bundle_dir=/Applications/Docker.app/Contents
+declare -r privtools=/Library/PrivilegedHelperTools
+
+for tool in docker docker-compose docker-diagnose docker-machine notary; do
+    /bin/ln -sf ${docker_bundle_dir}/Resources/bin/${tool} /usr/local/bin
+done
+
+[[ ! -d ${privtools} ]] &amp;&amp; /bin/mkdir -p ${privtools} ; /bin/chmod 1755 ${privtools}
+
+/usr/bin/install -m 0544 -o root -g wheel ${docker_bundle_dir}/Library/LaunchServices/com.docker.vmnetd ${privtools}
+/usr/bin/install -m 0644 -o root -g wheel ${docker_bundle_dir}/Resources/com.docker.vmnetd.plist /Library/LaunchDaemons
+
+VERSION=$(/usr/bin/defaults read /Applications/Docker.app/Contents/Info.plist VmnetdVersion)
+/usr/bin/defaults write /Library/LaunchDaemons/com.docker.vmnetd.plist Version -string ${VERSION}
+/usr/bin/plutil -convert xml1 /Library/LaunchDaemons/com.docker.vmnetd.plist
+/bin/chmod 0644 /Library/LaunchDaemons/com.docker.vmnetd.plist
+
+/bin/launchctl load /Library/LaunchDaemons/com.docker.vmnetd.plist
+            </string>
+			<key>postuninstall_script</key>
+			<string>#!/bin/bash
+#
+# This script just reverses the postinstall operations
+#
+
+# Unload networking
+# (use -F to force this; there are probably better ways to do this
+# but this margin isn't big enough ...)
+/bin/launchctl unload -F /Library/LaunchDaemons/com.docker.vmnetd.plist
+
+rm -f /Library/LaunchDaemons/com.docker.vmnetd.plist
+rm -f /Library/PrivilegedHelperTools/com.docker.vmnetd
+rm -f /var/tmp/com.docker.vmnetd.socket
+
+for tool in docker docker-compose docker-diagnose docker-machine notary; do
+    rm -f /usr/local/bin/${tool}
+done
+            </string>
+			<key>unattended_install</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.chilcote.munki.Docker</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.chilcote.download.Docker</key>
+			<dict>
+				<key>git_hash</key>
+				<string>bee94c240d2acd429922fa09b7115ae6508ba01a</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.chilcote-recipes/Docker/Docker.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>8e99503cc6b8e2d59a4a7ada035a6c35e9b371707ec8870280455322afe92ea6</string>
+			</dict>
+			<key>com.github.chilcote.munki.Docker</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e8e46a8dbc60f96f9570bef1ae4da68563b59880</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.chilcote-recipes/Docker/Docker.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>ee3f2607da34a9cce80ecb34cb38e41b3f00d06065716bd9e33e21587153535b</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

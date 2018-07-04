@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MySQLWorkbench</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Database</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Oracle</string>
+		<key>NAME</key>
+		<string>MySQLWorkbench</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>MySQL Workbench is a unified visual tool for database architects, developers, and DBAs.</string>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Oracle Corporation</string>
+			<key>display_name</key>
+			<string>MySQL Workbench</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.cgerke-recipes.munki.MySQLWorkbench</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.cgerke-recipes.download.MySQLWorkbench</key>
+			<dict>
+				<key>git_hash</key>
+				<string>249400aa8e5ce9324456bc0bd4c84937c9c60a74</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.cgerke-recipes/Applications/MySQLWorkbench.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>5312d020cf8905420e9c18d7c5f0565e7e77824418e4fbc8b1792318ef4babf6</string>
+			</dict>
+			<key>com.github.autopkg.cgerke-recipes.munki.MySQLWorkbench</key>
+			<dict>
+				<key>git_hash</key>
+				<string>c22ae7f875d6a2746761e74ada25aa8228183f00</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.cgerke-recipes/Applications/MySQLWorkbench.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>2374751f05c8538e8d1972462b404cd7eea606b897fa79609d7bee2be119bb26</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

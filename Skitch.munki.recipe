@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Skitch</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Evernote</string>
+		<key>NAME</key>
+		<string>Skitch</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Evernote</string>
+			<key>description</key>
+			<string>Get your point across with fewer words using annotation, shapes and sketches, so that your ideas become reality faster.</string>
+			<key>display_name</key>
+			<string>Skitch</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.sheagcraig.munki.Skitch</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.sheagcraig.download.Skitch</key>
+			<dict>
+				<key>git_hash</key>
+				<string>f009ecea03eedd179e35c10e5015e9b992a1d9fe</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/Skitch/Skitch.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>34588853141241eb0b059cec0cd25aa4cd768df19b0d14bfa6250e3d872c23a9</string>
+			</dict>
+			<key>com.github.sheagcraig.munki.Skitch</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a7cdf7d1f1d48b9bd8b15241b79ec8de0c4fc329</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/Skitch/Skitch.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>f531913f2b76cd5570ed8ed32e29e13f8cb430b8d86172b490a28b004fd5d3cc</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

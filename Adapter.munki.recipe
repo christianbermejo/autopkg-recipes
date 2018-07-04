@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Adapter</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.macroplant.com/latest-binaries/adapter-mac.dmg</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Adapter</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Audio and video converter.</string>
+			<key>developer</key>
+			<string>Macroplant LLC</string>
+			<key>display_name</key>
+			<string>Adapter</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.Adapter</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.Adapter</key>
+			<dict>
+				<key>git_hash</key>
+				<string>abb8a7a1dd6f0dfa3e23de17829e083126474304</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Macroplant/Adapter.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>fd5dccf2c922aafc060978d0c82308ac568655cad497127199690f152dd22d4a</string>
+			</dict>
+			<key>com.github.homebysix.munki.Adapter</key>
+			<dict>
+				<key>git_hash</key>
+				<string>56d469b1b1a1157b994fdae4ab2f0e7c161f434d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Macroplant/Adapter.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>73bea3c4ca1d144a8bb356992aa63b47443e5d02e43d414332d5b19c52f57b3a</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

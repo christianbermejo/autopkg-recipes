@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.OracleJava8</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>plugins/Oracle</string>
+		<key>NAME</key>
+		<string>OracleJava8</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+				<string>zoom</string>
+			</array>
+			<key>description</key>
+			<string>Java SE Runtime Environment 8 enables support for running Java-powered applets and applications.</string>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Oracle Corporation</string>
+			<key>display_name</key>
+			<string>Oracle Java 8</string>
+			<key>minimum_os_version</key>
+			<string>10.7.3</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstall_method</key>
+			<string>uninstall_script</string>
+			<key>uninstall_script</key>
+			<string>#!/bin/sh
+            # From http://www.java.com/en/download/help/mac_uninstall_java.xml
+            rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+            pkgutil --forget com.oracle.jre
+            </string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.OracleJava8</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.OracleJava8</key>
+			<dict>
+				<key>git_hash</key>
+				<string>698b1d3afd01dbfa839cc271180899af3d96fa90</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/OracleJava/OracleJava8.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>94215ec0af87d6eeaa6ac353b88eb015a99c03f6f0a52f8c59899304d5308542</string>
+			</dict>
+			<key>com.github.autopkg.munki.OracleJava8</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8e54b7fd5f5ed196709e787e104519b99a85624d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/OracleJava/OracleJava8.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>a2b50fca8fceeabf2bc3761e00a0994ac9aea6da963a511ca866d12200360f76</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

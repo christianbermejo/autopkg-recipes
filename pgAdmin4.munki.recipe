@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.pgAdmin4</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Development</string>
+		<key>APP_DESTINATION</key>
+		<string>/Applications</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/PostgreSQL</string>
+		<key>NAME</key>
+		<string>pgAdmin4</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:46.0) Gecko/20100101 Firefox/46.0</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.  pgAdmin is designed to answer the needs of all users, from writing simple SQL queries to developing complex databases. The graphical interface may be run on the desktop or on a web server and supports all common PostgreSQL features. The application includes a syntax highlighting SQL editor.</string>
+			<key>developer</key>
+			<string>PostgreSQL Global Development Group</string>
+			<key>display_name</key>
+			<string>pgAdmin 4 - PostgreSQL GUI tools</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.bnpl.autopkg.munki.pgAdmin4</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.bnpl.autopkg.download.pgadmin4</key>
+			<dict>
+				<key>git_hash</key>
+				<string>25381c0c2729e4131c96981cc8255f5e4836048d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.bnpl-recipes/pgAdmin4/pgAdmin4.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>a661dbb0b98f2d73cad9dc4b17a455582e9c3a8041fcf2c8153ae1647a39bf4c</string>
+			</dict>
+			<key>com.github.bnpl.autopkg.munki.pgAdmin4</key>
+			<dict>
+				<key>git_hash</key>
+				<string>25381c0c2729e4131c96981cc8255f5e4836048d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.bnpl-recipes/pgAdmin4/pgAdmin4.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>6cce3b66c7fb9140a5610f11f85c66d16d3459155b38741e2f9abeacec4cf5f8</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

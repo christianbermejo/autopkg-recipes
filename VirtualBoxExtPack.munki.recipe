@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.VirtualBoxExtPack</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Virtualization</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Oracle</string>
+		<key>NAME</key>
+		<string>VirtualBoxExtPack</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Oracle VirtualBox Extension Pack: Support for USB 2.0 devices, VirtualBox RDP and PXE boot for Intel cards.</string>
+			<key>developer</key>
+			<string>Oracle Corporation</string>
+			<key>display_name</key>
+			<string>VirtualBox Extension Pack</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jessepeterson.munki.VirtualBoxExtPack</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>VirtualBoxURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>bc82b3935da1b8942f42a3ce2dbde66fc1c389ce</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jessepeterson-recipes/Oracle/VirtualBoxURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>7eb16397abf0822b792ca88368c585c6dacd055efbacae96fe88636ddff4cb9a</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jessepeterson.munki.VirtualBoxExtPack</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a5d47e091f6ba2143ee5322c735672f6dbfd721d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jessepeterson-recipes/Oracle/VirtualBoxExtPack.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>7b6e9c357b83d504384c5a8c23889e0b7d582829dfe55b327fbde9667d2319af</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

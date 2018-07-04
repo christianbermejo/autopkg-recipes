@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.GoogleDrive</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://dl.google.com/drive/InstallBackupAndSync.dmg</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Google</string>
+		<key>NAME</key>
+		<string>GoogleDrive</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Google Drive sync for Mac. Access files on your computer from anywhere.</string>
+			<key>developer</key>
+			<string>Google</string>
+			<key>display_name</key>
+			<string>Google Backup and Sync</string>
+			<key>minimum_os_version</key>
+			<string>10.6</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/sh
+
+# Appreciatively copied from
+# https://github.com/Ginja/Admin_Scripts/blob/master/google_drive_helper.rb
+
+cp \
+        '/Applications/Backup and Sync.app/Contents/Helpers/Google Drive Icon Helper' \
+        '/Library/PrivilegedHelperTools/Google Drive Icon Helper'
+
+chown root:procmod '/Library/PrivilegedHelperTools/Google Drive Icon Helper'
+chmod 6755 '/Library/PrivilegedHelperTools/Google Drive Icon Helper'
+</string>
+			<key>postuninstall_script</key>
+			<string>#/bin/sh
+
+rm '/Library/PrivilegedHelperTools/Google Drive Icon Helper'
+</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.recipes-dankeller.munki.google-drive</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.recipes-dankeller.download.google-drive</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ad60739aa9cfb3f1a796ff6fae71cb2313506a82</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.dankeller-recipes/GoogleDrive/GoogleDrive.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>516f849a5c9e98b2a115cf2e58aa8f15596aa34df350423835b557fbcd85006b</string>
+			</dict>
+			<key>com.github.autopkg.recipes-dankeller.munki.google-drive</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ad60739aa9cfb3f1a796ff6fae71cb2313506a82</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.dankeller-recipes/GoogleDrive/GoogleDrive.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>98dce202198436abe5491958ef237444a7ef56a93d872cb3793baf79b6ced988</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

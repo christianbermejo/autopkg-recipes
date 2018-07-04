@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Keka</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Keka</string>
+		<key>NAME</key>
+		<string>Keka</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://www.keka.io/update</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Keka is a free file archiver for macOS.</string>
+			<key>developer</key>
+			<string>aOne</string>
+			<key>display_name</key>
+			<string>Keka</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.gerardkok.munki.Keka</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.gerardkok.download.Keka</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0d7c0b098baa862ff69a3fbeeeaea90c0e0d4dc6</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/Keka/Keka.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1d1ab674cd3a8e70ef7d174ca2c5f79cddf43a7f31de8544a1d74b1df0ffbc73</string>
+			</dict>
+			<key>com.github.gerardkok.munki.Keka</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0d7c0b098baa862ff69a3fbeeeaea90c0e0d4dc6</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/Keka/Keka.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>5077a8ba869a24753ca39eb1db18e672a72a92248fd832a96adafe7ed5755e6f</string>
+			</dict>
+			<key>com.github.gerardkok.pkg.Keka</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0d7c0b098baa862ff69a3fbeeeaea90c0e0d4dc6</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/Keka/Keka.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>4afec90eee2666f96348a2b54386810aef40b24d60649d8fefae20987d22f9a3</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

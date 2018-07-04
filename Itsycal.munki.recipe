@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Itsycal</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>APP_DESTINATION</key>
+		<string>/Applications</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Mowglii</string>
+		<key>NAME</key>
+		<string>Itsycal</string>
+		<key>SEARCH_URL</key>
+		<string>https://www.mowglii.com/itsycal/</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Itsycal is a tiny calendar for your Mac's menu bar.</string>
+			<key>developer</key>
+			<string>Mowglii</string>
+			<key>display_name</key>
+			<string>Itsycal</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.Itsycal.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.Itsycal.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0516c187470af3db942f3e5d9e7fe5d2c25ed289</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Itsycal/Itsycal.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>f14303c10e4aacf65947fd02d57502a74861b59a630915a917f4705a44863461</string>
+			</dict>
+			<key>com.github.jleggat.Itsycal.munki</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0575c97a6b1b5d077f94baa6867a26b6d95ae246</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Itsycal/Itsycal.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>7d72bd83004e84f7083dd242a4aec18b72a7a0412508d5fbc59928fa588fa5d6</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

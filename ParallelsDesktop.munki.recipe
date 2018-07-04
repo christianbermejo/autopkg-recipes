@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.ParallelsDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Virtualization</string>
+		<key>MAJOR_VERSION</key>
+		<string>13</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Parallels Desktop</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Virtualization tool for running Windows apps without rebooting.</string>
+			<key>developer</key>
+			<string>Parallels, Inc.</string>
+			<key>display_name</key>
+			<string>Parallels Desktop</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+chflags nohidden "/Applications/Parallels Desktop.app"
+            </string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.ParallelsDesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.ParallelsDesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>681fe3c93cdd763a5a95b711a38b88a137bffc2d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Parallels/ParallelsDesktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d88e878dc4faab4cce86d83af105db5b1fb4133d1416e58ac6265df5addf5643</string>
+			</dict>
+			<key>com.github.homebysix.munki.ParallelsDesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>57cc559db0fc3ec2f09f1c69edd3928c2483b6ca</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Parallels/ParallelsDesktop.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>b0fd216a3b8b6b5a9558f843b95a7c9fe136f224103e77245a54a6727d2bbafb</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

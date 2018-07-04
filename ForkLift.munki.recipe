@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.ForkLift</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/BinaryNights</string>
+		<key>NAME</key>
+		<string>ForkLift</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://updates.binarynights.com/ForkLift3/update.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Powerful file manager: FTP, SFTP, WebDAV, S3, and more.</string>
+			<key>developer</key>
+			<string>BinaryNights LLC</string>
+			<key>display_name</key>
+			<string>ForkLift</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.ForkLift</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.ForkLift</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4049bd46c7298a7356ba031cb52c087efe895fbe</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/BlackPixel/ForkLift.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d25c9d2f07667ab18504ec9257b0a9f46cc8fb84e0ee50614e4d2efb1ef46a96</string>
+			</dict>
+			<key>com.github.homebysix.munki.ForkLift</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8a011dfd74579a361268b4c6d5cd07e7e9166b9c</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/BlackPixel/ForkLift.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>08687b80c30e8fd79365566ae79d562ba637008db0e7d60e6b70cfdffc3a3166</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

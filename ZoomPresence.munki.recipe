@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.ZoomPresence</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Messaging</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://zoom.us/client/latest/ZoomRooms.pkg</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Zoom</string>
+		<key>NAME</key>
+		<string>ZoomPresence</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>ZoomPresence.app</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>zoom</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Zoom Rooms application to setup your conference room for one-touch meeting and calendar integration.</string>
+			<key>developer</key>
+			<string>Zoom Video Communications, Inc.</string>
+			<key>display_name</key>
+			<string>Zoom Rooms</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.ZoomPresence</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.ZoomPresence</key>
+			<dict>
+				<key>git_hash</key>
+				<string>dd934134b289297634b857b009fd781135d39db5</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Zoom/ZoomPresence.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d887939b52c61fedaa22eef6590c65453a4eaa33921efc9e3a82750137a1f6f7</string>
+			</dict>
+			<key>com.github.homebysix.munki.ZoomPresence</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4f95845e835d58b5d55431757ed401698e91fac1</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Zoom/ZoomPresence.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>40ba58a15dbd6cff60660cad54884139f49781f4cf014188e5af30b8fd2aff16</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

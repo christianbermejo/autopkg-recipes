@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.ImageOptim</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/ImageAlpha</string>
+		<key>NAME</key>
+		<string>ImageOptim</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://imageoptim.com/appcast.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>ImageOptim is a free app that makes images take up less disk space and load faster, without sacrificing quality. It optimizes compression parameters, removes junk metadata and unnecessary color profiles.</string>
+			<key>developer</key>
+			<string>ImageAlpha</string>
+			<key>display_name</key>
+			<string>ImageOptim</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.gerardkok.munki.ImageOptim</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.gerardkok.download.ImageOptim</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6c5a19222761919d75f0d8d86f8c21c5b5ac47ea</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/ImageOptim/ImageOptim.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>944fe5b881d7da87b4c32e01595d4da3ae003752c9970e483a0dda1d4f150a80</string>
+			</dict>
+			<key>com.github.gerardkok.munki.ImageOptim</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6c2eec1fb9e89ab7f09921d31fc09c148c1ac2c7</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/ImageOptim/ImageOptim.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>3bcf5545ec080a1aa4dc340724bac515479849fd2d7404000e2a700984e832fc</string>
+			</dict>
+			<key>com.github.gerardkok.pkg.ImageOptim</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6c2eec1fb9e89ab7f09921d31fc09c148c1ac2c7</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/ImageOptim/ImageOptim.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>bf7fa17da1de7a8b8bee3094733f7dcaf60509c9ad1d93d4a1c6a529539ec558</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MicrosoftRemoteDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Microsoft</string>
+		<key>DOWNLOADURL</key>
+		<string>https://go.microsoft.com/fwlink/?linkid=%PRODUCTID%</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft</string>
+		<key>NAME</key>
+		<string>MicrosoftRemoteDesktop</string>
+		<key>PRODUCTID</key>
+		<string>868963</string>
+		<key>SOFTWARETITLE</key>
+		<string>Remote</string>
+		<key>SOFTWARETYPE</key>
+		<string>Desktop</string>
+		<key>VENDOR</key>
+		<string>Microsoft</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Microsoft Remote Desktop</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Use the new Microsoft Remote Desktop app to connect to a remote PC or virtual apps and desktops made available by your administrator. The app helps you be productive no matter where you are.</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>display_name</key>
+			<string>Microsoft Remote Desktop</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.foigus.munki.microsoftremotedesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.foigus.munki.microsoftremotedesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e676a9849170a3aa81ccece388a2c4fed93942ed</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.foigus-recipes/Microsoft/MicrosoftRemoteDesktop.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>0451dc71895f21aef3f269be46d5752be24f6c65c104b8784705426c3a27f2ec</string>
+			</dict>
+			<key>com.github.rtrouton.download.microsoftremotedesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b8d0510ba0ea29e4f3cddbf776a86fdcb7c1e126</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/MicrosoftRemoteDesktop/MicrosoftRemoteDesktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>f1cfb7181b97002e6962987f5be5c993419b51ea5af35ed2dddbe7ce53cf24fd</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

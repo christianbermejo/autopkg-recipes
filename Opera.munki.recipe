@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Opera</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Web Browsers</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Opera</string>
+		<key>NAME</key>
+		<string>Opera</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>production</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Otello</string>
+			<key>description</key>
+			<string>Opera products enable more than 350 million internet consumers to discover and connect with the content and services that matter most to them, no matter what device, network or location. In turn, we help advertisers reach the audiences that build value for their businesses. Opera also delivers products and services to more than 120 operators around the world, enabling them to provide a faster, more economical and better network experience to their subscribers.</string>
+			<key>display_name</key>
+			<string>Opera</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstallable</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.keeleysam.recipes.Opera.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>OperaURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>2ff1e1e57747ecbccc47e18b270a721a1911abe3</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Opera/OperaURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>99e71504afc09de1c411961a2656981bd3409fc9bcaa30f525f3810355e5aa1d</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.keeleysam.recipes.Opera.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>f6df176e67433ef78fb1621ca56724a5e8bc4860</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Opera/Opera.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d150502402080d1638bf3187683cdc5f7be8e5a44bbb89c819b1aaa5390b9bc9</string>
+			</dict>
+			<key>com.github.keeleysam.recipes.Opera.munki</key>
+			<dict>
+				<key>git_hash</key>
+				<string>f6df176e67433ef78fb1621ca56724a5e8bc4860</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Opera/Opera.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>ffe814d867492e36ab97124a0de16299439d8222bd45b2a7a2bb8bf0ece7db01</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
