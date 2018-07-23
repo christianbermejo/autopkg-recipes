@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.ParallelsDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>MAJOR_VERSION</key>
+		<string>13</string>
+		<key>NAME</key>
+		<string>Parallels Desktop</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.download.ParallelsDesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.ParallelsDesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>681fe3c93cdd763a5a95b711a38b88a137bffc2d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Parallels/ParallelsDesktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d88e878dc4faab4cce86d83af105db5b1fb4133d1416e58ac6265df5addf5643</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.Viber</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Viber</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.joshua-d-miller.download.viber</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.joshua-d-miller.download.viber</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6e0ee2e73d3f69d958b559f62a3c3ec73fdcd66d</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/Viber/Viber.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>b3bb839c567470ad0495e77711b1d0024d0e5b7d94a2b29cb4a0e6699ba946e0</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

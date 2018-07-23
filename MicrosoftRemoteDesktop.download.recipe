@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.MicrosoftRemoteDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOADURL</key>
+		<string>https://go.microsoft.com/fwlink/?linkid=%PRODUCTID%</string>
+		<key>NAME</key>
+		<string>Microsoft Remote Desktop</string>
+		<key>PRODUCTID</key>
+		<string>868963</string>
+		<key>SOFTWARETITLE</key>
+		<string>Remote</string>
+		<key>SOFTWARETYPE</key>
+		<string>Desktop</string>
+		<key>VENDOR</key>
+		<string>Microsoft</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.download.microsoftremotedesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.rtrouton.download.microsoftremotedesktop</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b8d0510ba0ea29e4f3cddbf776a86fdcb7c1e126</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/MicrosoftRemoteDesktop/MicrosoftRemoteDesktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>f1cfb7181b97002e6962987f5be5c993419b51ea5af35ed2dddbe7ce53cf24fd</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

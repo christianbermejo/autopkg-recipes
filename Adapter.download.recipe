@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.Adapter</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.macroplant.com/latest-binaries/adapter-mac.dmg</string>
+		<key>NAME</key>
+		<string>Adapter</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.download.Adapter</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.Adapter</key>
+			<dict>
+				<key>git_hash</key>
+				<string>abb8a7a1dd6f0dfa3e23de17829e083126474304</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Macroplant/Adapter.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>fd5dccf2c922aafc060978d0c82308ac568655cad497127199690f152dd22d4a</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

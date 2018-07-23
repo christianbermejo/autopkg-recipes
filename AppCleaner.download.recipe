@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.AppCleaner</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AppCleaner</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://freemacsoft.net/appcleaner/Updates.xml</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.AppCleaner.download</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.AppCleaner.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>55371b0cb7d3a9528691e0e94e999674900fdabd</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/AppCleaner/AppCleaner.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>8cfac1d88c333c08f73e17580eb900e876102d45ab2374207a84531715d1315b</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

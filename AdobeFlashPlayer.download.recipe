@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.AdobeFlashPlayer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeFlashPlayer</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.FlashPlayer</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>AdobeFlashURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>7b8574bf37f8b6df0bcea145ab909e219bbe8099</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/AdobeFlashPlayer/AdobeFlashURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>7737a1cc04398e0b8a5e8444dfc63691cf2efe7a0f88ce43f80b66ea7c06ba56</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.FlashPlayer</key>
+			<dict>
+				<key>git_hash</key>
+				<string>1e13bcf8dd8e90e10c04a5c913842e263499a8e2</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/AdobeFlashPlayer/AdobeFlashPlayer.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>32cb6011ba302138a63d00ae7640ff104ba0721e2e0d4fcbdcd5085e3b09b1fe</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
