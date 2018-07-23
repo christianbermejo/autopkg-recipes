@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.iTerm2</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>iTerm2</string>
+		<key>RELEASE</key>
+		<string>final</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>io.github.hjuutilainen.download.iTerm2</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.iTerm2</key>
+			<dict>
+				<key>git_hash</key>
+				<string>89bba55431c07e37bb498cc476ba2366dcf52469</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/iTerm2/iTerm2.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>8ddb1e9e9c14fc9bd19e997250942f7ae67b94702171ed35e69c6bcffe6a07a5</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

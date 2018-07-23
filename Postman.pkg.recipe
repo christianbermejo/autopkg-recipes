@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.pkg.Postman</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Postman</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.bnpl.autopkg.pkg.postman</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.bnpl.autopkg.download.postman</key>
+			<dict>
+				<key>git_hash</key>
+				<string>014c00e7d599190fb358aeba6bf4ce258a707230</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.bnpl-recipes/Postman/Postman.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>69c4bd135e5d13c759ac2a64eb811023181fa15cbd7c706d762273cbbf413a22</string>
+			</dict>
+			<key>com.github.bnpl.autopkg.pkg.postman</key>
+			<dict>
+				<key>git_hash</key>
+				<string>73351379497978d566e80b2776bc7d18e76f6840</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.bnpl-recipes/Postman/Postman.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>f67f181e1b8437eb95b47654186198674d0ff90fd74bdd7348d63c03ca472699</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

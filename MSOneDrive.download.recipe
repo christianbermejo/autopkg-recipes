@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.MSOneDrive</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OneDrive</string>
+		<key>URL</key>
+		<string>https://go.microsoft.com/fwlink/?linkid=823060</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.apettinen.download.MSOneDrive</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.apettinen.download.MSOneDrive</key>
+			<dict>
+				<key>git_hash</key>
+				<string>84f14b9c959d5f4ce498c6d9da6c0dbd21cb95d0</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.apettinen-recipes/MSOneDrive/MSOneDrive.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>3d2205f24f7bd6d637aedf8d509696ebc3f8c560b09fb0bda0e599467c79d629</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

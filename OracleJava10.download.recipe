@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.OracleJava10</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OracleJava10</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.OracleJava10</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.OracleJava10</key>
+			<dict>
+				<key>git_hash</key>
+				<string>82d38a709b71139467cbad17307b6e540819233e</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/OracleJava/OracleJava10.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>207a53d6851b7e8fa6d5bc06609897dfa1f195c7b24dd1512b4df53c9f5dd48e</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

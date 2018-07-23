@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.download.MSPowerPoint2016</string>
+	<key>Input</key>
+	<dict>
+		<key>CHANNEL</key>
+		<string>Production</string>
+		<key>LOCALE_ID</key>
+		<string>1033</string>
+		<key>NAME</key>
+		<string>MSPowerPoint2016</string>
+		<key>VERSION</key>
+		<string>latest</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.MSPowerPoint2016</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MSOffice2016URLandUpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>bae6c3c49b86df34cd39965dcfad6f4b75ed88a2</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2016URLandUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>58d2b507db9913b27e96db55735008e19fea2e1b19cdcbeca4af5ccf026d6be2</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.MSPowerPoint2016</key>
+			<dict>
+				<key>git_hash</key>
+				<string>f9b3e4faca9144c984664ce5250836ab2fd4967b</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSPowerPoint2016.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>3941d2f0eb01e580a2bcd7a45dcb4a888318a9b5599827c3b30561e6752153ad</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
